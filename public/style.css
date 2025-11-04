@@ -1,0 +1,70 @@
+:root{
+  --bg:#f6f2ee;
+  --card:#efe7df;
+  --accent:#6b4423;
+  --muted:#7b6a5a;
+  --green:#2b7a4b;
+}
+
+body{
+  background: var(--bg);
+  font-family: "Georgia", serif;
+  color: var(--muted);
+  margin:0;
+}
+
+.site-header{
+  background: linear-gradient(90deg,#6b4423 0%, #a36b3a 100%);
+  color: #fff;
+}
+
+.map-card{
+  height:72vh;
+  min-height:360px;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid rgba(107,68,35,0.12);
+}
+
+/* cards */
+.card{
+  background: var(--card);
+  border: none;
+  border-radius: 10px;
+}
+
+/* list items */
+.list-group-item{
+  background: transparent;
+  border: none;
+  padding: 0.6rem 0;
+}
+
+/* buttons */
+.btn-primary{
+  background: var(--accent);
+  border: none;
+  color: #fff;
+}
+.btn-outline-light{
+  color: var(--accent);
+  border-color: rgba(107,68,35,0.15);
+}
+
+/* toast area */
+.toast-area{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+}
+
+/* small helper */
+.small.muted{ color: #6b5a4b; }
+
+/* mobile tweak: sidebar below map on narrow screens */
+@media (max-width: 991px){
+  .map-card { height: 56vh; }
+  .site-header .container { padding-top:8px; padding-bottom:8px; }
+}
