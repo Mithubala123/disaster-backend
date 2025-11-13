@@ -1,4 +1,4 @@
-// script.js - updated for mainCategory + subType structure
+// script.js
 
 const API = "/api/pins";
 const map = L.map("map").setView([20.5937, 78.9629], 5);
@@ -68,7 +68,6 @@ document.getElementById("pin-form").addEventListener("submit", async (e) => {
   let imageData = null;
   if (file) imageData = await fileToDataURL(file);
 
-  // ✅ FIX: explicitly swap to [lng, lat] before sending
   const payload = {
     mainCategory,
     subType,
